@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/**
+ * Основные стили
+ **/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.container {
+  @include min-max(320px, 100%, 0);
+}
+
+.wrap {
+  @include min-max(320px, 1020px, 15px);
+}
+
+.common-bg {
+  background: url("../img/common-bg.jpg") bottom center no-repeat;
+}
+
+@media screen and (max-width: 1019px) {
+  .wrap {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .wrap {
+    width: 480px;
+  }
+  .common-bg {
+    background: url("../img/common-bg480.jpg") bottom center no-repeat;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .wrap {
+    width: 320px;
+  }
+  .common-bg {
+    background: url("../img/common-bg320.jpg") bottom center no-repeat;
+  }
+}
